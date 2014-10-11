@@ -1,5 +1,6 @@
 class SongsController < ApplicationController
   before_action :set_song, only: [:show, :edit, :update, :destroy]
+  respond_to :html, :xml, :json
 
   def index
     @songs = Song.all
